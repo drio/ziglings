@@ -35,7 +35,7 @@ const llama_count = 5;
 // Again, this value's type and size must be known at compile
 // time, but we're letting the compiler infer both from the
 // return type of a function.
-const llamas = makeLlamas(llama_count);
+const llamas = comptime makeLlamas(llama_count);
 
 // And here's the function. Note that the return value type
 // depends on one of the input arguments!

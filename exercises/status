@@ -1,4 +1,8 @@
 #!/bin/bash
 
-i=63 t=$(ls -aclhrt *.zig | wc -l) ;printf "%s/%s %s%% \n" $i $t $(echo "$i*100/$t" | bc)
+if [ ".$1" == "." ];then
+		echo "Provide your latest completed zigling."
+		exit 0
+fi
+i=$1 t=$(ls -aclhrt *.zig | wc -l) ;printf "%s/%s %s%% \n" $i $t $(echo "$i*100/$t" | bc)
 
